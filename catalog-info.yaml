@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: el77jlnqc-nodejs-gitops
+  description: This is GitOps manifest for el77jlnqc-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: el77jlnqc-nodejs
+    janus-idp.io/tekton: el77jlnqc-nodejs 
+    backstage.io/kubernetes-id: el77jlnqc-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:el77jlnqc-nodejs
